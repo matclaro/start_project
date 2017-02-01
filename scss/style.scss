@@ -1,5 +1,5 @@
-@include _variables.scss
-@include _mixins.scss
+@include 'variables';
+@include 'mixins';
 
 * {
 	-webkit-box-sizing: border-box;
