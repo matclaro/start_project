@@ -1,5 +1,6 @@
-@include 'variables';
-@include 'mixins';
+@import 'variables';
+@import 'mixins';
+@import 'reset';
 
 * {
 	-webkit-box-sizing: border-box;
