@@ -1,13 +1,16 @@
-@mixin img-100 {
-	width: 100%;
-	height: auto;
-}
 @mixin absolute-center-x {
 	position: absolute;
 	left: 0;
 	right: 0;
 	margin-left: auto;
 	margin-right: auto;
+}
+@mixin absolute-center-y {
+	position: absolute;
+	top: 50%;
+	bottom: 50%;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 @mixin no-appearance {
 	-webkit-appearance: none;
@@ -16,21 +19,17 @@
 	border: none;
 	background: none;
 }
-@mixin placeholder ($color, $font-weight) {
+@mixin placeholder {
 	&::-webkit-input-placeholder {
-		color: $color;
-		font-weight: $font-weight;
+		@content;
 	}
 	&:-moz-placeholder {
-		color: $color;
-		font-weight: $font-weight;
+		@content;
 	}
 	&::-moz-placeholder {
-		color: $color;
-		font-weight: $font-weight;
+		@content;
 	}
 	&:-ms-input-placeholder {
-		color: $color;
-		font-weight: $font-weight;
+		@content;
 	}
 }
