@@ -4,7 +4,28 @@
 
 html, body {
 	width: 100%;
-	background-color: white;
+	background-color: red;
 	font-size: 100%;	
+	@include phone-l {
+		background-color: salmon;
+	}
+	@include phone-m {
+		background-color: green;
+	}
+	@include phone-s {
+		background-color: black;
+	}
+	@include tablet-port {
+		background-color: aqua;
+	}
+	@include tablet-land {
+		background-color: yellow;
+	}
+	@include desktop {
+		background-color: thistle;
+	}
+	@include desktop-xl {
+		background-color: crimson;
+	}	 
 }
 

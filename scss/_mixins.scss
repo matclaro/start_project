@@ -1,24 +1,53 @@
-@mixin absolute-center-x {
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
+@mixin phone-s {
+	@media (max-width: 320px) {
+		@content;
+	}
 }
-@mixin absolute-center-y {
-	position: absolute;
-	top: 50%;
-	bottom: 50%;
-	margin-top: auto;
-	margin-bottom: auto;
+
+@mixin phone-m {
+	@media (max-width: 375px) {
+		@content;
+	}
 }
+
+@mixin phone-l {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media only screen and (min-width: 1280px) {
+		@content;
+	}
+}
+
+@mixin desktop-xl {
+	@media only screen and (min-width: 1500px) {
+		@content;
+	}
+}
+
+@mixin tablet-port {
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
+		@content;
+	}
+}
+
+@mixin tablet-land {
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) {
+		@content;
+	}
+}
+
+
 @mixin no-appearance {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	border: none;
-	background: none;
+
 }
+
 @mixin placeholder {
 	&::-webkit-input-placeholder {
 		@content;
